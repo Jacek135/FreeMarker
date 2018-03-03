@@ -4,7 +4,6 @@ public class Car {
 
     private String make;
     private String model;
-    private String test;
 
     public Car() {
     }
@@ -28,13 +27,5 @@ public class Car {
 
     public void setModel(String model) {
         this.model = model;
-    }
-
-    public String getTest() {
-        return test;
-    }
-
-    public void setTest(String test) {
-        this.test = test;
     }
 }
