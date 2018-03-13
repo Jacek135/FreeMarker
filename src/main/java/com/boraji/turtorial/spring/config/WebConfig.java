@@ -4,14 +4,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.boraji.turtorial.spring.controller"})
+@ComponentScan(basePackages = {
+        "com.boraji.turtorial.spring.config",
+        "com.boraji.turtorial.spring.facade",
+        "com.boraji.turtorial.spring.service",
+})
+
 public class WebConfig {
 
     @Bean

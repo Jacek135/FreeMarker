@@ -1,6 +1,8 @@
 package com.boraji.turtorial.spring.controller;
 
-import com.boraji.turtorial.spring.model.Car;
+import com.boraji.turtorial.spring.facade.CarFacade;
+import com.boraji.turtorial.spring.model.CarDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,12 +16,18 @@ import java.util.List;
 public class HelloWorldController {
 
     private static final String CARS = "redirect:/cars";
-    private static List<Car> carList = new ArrayList<>();
+    private static List<CarDto> carDtoList = new ArrayList<>();
+    private CarFacade facade;
 
     static {
-        carList.add(new Car("Honda", "Civic"));
-        carList.add(new Car("Toyota", "Camry"));
-        carList.add(new Car("Nissan", "Altima"));
+        carDtoList.add(new CarDto("Honda", "Civic"));
+        carDtoList.add(new CarDto("Toyota", "Camry"));
+        carDtoList.add(new CarDto("Nissan", "Altima"));
+    }
+
+    @Autowired
+    public HelloWorldController(CarFacade facade) {
+        this.facade = facade;
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -27,19 +35,19 @@ public class HelloWorldController {
         return CARS;
     }
 
-
     @RequestMapping(value = "/cars", method = RequestMethod.GET)
     public String seyHello(@ModelAttribute("model") ModelMap model) {
-        model.addAttribute("carList", carList);
+//        model.addAttribute("carList", carDtoList);
+        model.addAttribute("carList", facade.findAllCars());
 
         return "index";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addCar(@ModelAttribute("car") Car car) {
-        if (null != car && null != car.getMake() && null != car.getModel()
-                && !car.getMake().isEmpty() && !car.getModel().isEmpty()) {
-            carList.add(car);
+    public String addCar(@ModelAttribute("car") CarDto carDto) {
+        if (null != carDto && null != carDto.getMake() && null != carDto.getModel()
+                && !carDto.getMake().isEmpty() && !carDto.getModel().isEmpty()) {
+            carDtoList.add(carDto);
         }
         return CARS;
     }

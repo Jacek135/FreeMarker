@@ -37,7 +37,7 @@
 
     <fieldset>
         <legend>Add Car</legend>
-        <form name="car" action="add" method="post" modelAttribute="car">
+        <form name="carDto" action="add" method="post" modelAttribute="carDto">
             Make : <input type="text" name="make" />	<br/>
             Model: <input type="text" name="model" />	<br/>
             <input type="submit" value="   Save   " />
@@ -49,9 +49,9 @@
         <tr>
             <th>Make</th>  <th>Model</th>
         </tr>
-        <#list model["carList"] as car>
+        <#list model["carList"] as carDto>
             <tr>
-                <td>${car.make}</td> <td>${car.model}</td>
+                <td>${carDto.make}</td> <td>${carDto.model}</td>
             </tr>
         </#list>
     </table>
