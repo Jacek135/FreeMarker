@@ -10,9 +10,10 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {
-        "com.boraji.turtorial.spring.config",
-        "com.boraji.turtorial.spring.facade",
-        "com.boraji.turtorial.spring.service",
+        "com.boraji.turtorial.spring"
+//                .config",
+//        "com.boraji.turtorial.spring.facade",
+//        "com.boraji.turtorial.spring.service",
 })
 
 public class WebConfig {
