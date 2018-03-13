@@ -1,6 +1,6 @@
-package com.boraji.turtorial.spring.repository;
+package com.karas.tutorial.spring.repository;
 
-import com.boraji.turtorial.spring.entity.Car;
+import com.karas.tutorial.spring.entity.Car;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CarRepository extends CrudRepository<Car, Long> {

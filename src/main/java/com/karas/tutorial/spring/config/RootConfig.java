@@ -1,4 +1,4 @@
-package com.boraji.turtorial.spring.config;
+package com.karas.tutorial.spring.config;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +19,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories("com.boraji.turtorial.spring.repository")
+@EnableJpaRepositories("com.karas.tutorial.spring.repository")
 @PropertySource("classpath:db.properties")
 public class RootConfig {
     //Service and Repository beans configuration
@@ -36,7 +36,7 @@ public class RootConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan("com.boraji.turtorial.spring.entity");
+        em.setPackagesToScan("com.karas.tutorial.spring.entity");
         em.setJpaVendorAdapter(vendorAdapter());
         em.setJpaProperties(additionalProperties());
 

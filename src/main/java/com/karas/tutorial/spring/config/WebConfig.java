@@ -1,4 +1,4 @@
-package com.boraji.turtorial.spring.config;
+package com.karas.tutorial.spring.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,9 +10,9 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {
-        "com.boraji.turtorial.spring.controller",
-        "com.boraji.turtorial.spring.facade",
-        "com.boraji.turtorial.spring.service",
+        "com.karas.tutorial.spring.controller",
+        "com.karas.tutorial.spring.facade",
+        "com.karas.tutorial.spring.service",
 })
 
 public class WebConfig {

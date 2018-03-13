@@ -1,7 +1,7 @@
-package com.boraji.turtorial.spring.service;
+package com.karas.tutorial.spring.service;
 
-import com.boraji.turtorial.spring.entity.Car;
-import com.boraji.turtorial.spring.repository.CarRepository;
+import com.karas.tutorial.spring.entity.Car;
+import com.karas.tutorial.spring.repository.CarRepository;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

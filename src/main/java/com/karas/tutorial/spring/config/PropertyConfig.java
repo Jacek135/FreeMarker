@@ -1,4 +1,4 @@
-package com.boraji.turtorial.spring.config;
+package com.karas.tutorial.spring.config;
 
 //@Configuration
 

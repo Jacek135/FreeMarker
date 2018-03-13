@@ -1,7 +1,7 @@
-package com.boraji.turtorial.spring.controller;
+package com.karas.tutorial.spring.controller;
 
-import com.boraji.turtorial.spring.facade.CarFacade;
-import com.boraji.turtorial.spring.model.CarDto;
+import com.karas.tutorial.spring.facade.CarFacade;
+import com.karas.tutorial.spring.model.CarDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

@@ -1,6 +1,6 @@
-package com.boraji.turtorial.spring.model;
+package com.karas.tutorial.spring.model;
 
-import com.boraji.turtorial.spring.entity.Car;
+import com.karas.tutorial.spring.entity.Car;
 
 public class CarDto {
 

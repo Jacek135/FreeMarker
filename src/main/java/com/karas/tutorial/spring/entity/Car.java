@@ -1,4 +1,4 @@
-package com.boraji.turtorial.spring.entity;
+package com.karas.tutorial.spring.entity;
 
 import javax.persistence.*;
 
