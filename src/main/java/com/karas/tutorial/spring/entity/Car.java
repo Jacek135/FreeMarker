@@ -3,11 +3,13 @@ package com.karas.tutorial.spring.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "CARS")
+@Table(name= "cars")
 public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.AUTO, generator = "cars_sequence")
+//    @SequenceGenerator(name = "cars_sequence", sequenceName = "cars_sequence")
     private Long id;
 
     @Column(name = "MAKE")

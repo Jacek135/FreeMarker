@@ -28,4 +28,8 @@ public class CarFacade {
                 })
                 .collect(Collectors.toList());
     }
+
+    public void saveCar(CarDto carDto) {
+        service.saveCar(carDto);
+    }
 }
