@@ -6,18 +6,21 @@ public class CarDto {
 
     private String make;
     private String model;
+    private Long year;
 
     public CarDto() {
     }
 
-    public CarDto(String make, String model) {
+    public CarDto(String make, String model, Long year) {
         this.make = make;
         this.model = model;
+        this.year = year;
     }
 
     public CarDto(Car car) {
         this.make = car.getMake();
         this.model = car.getModel();
+        this.year = car.getYear();
     }
 
     public String getMake() {
@@ -34,5 +37,13 @@ public class CarDto {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public Long getYear() {
+        return year;
+    }
+
+    public void setYear(Long year) {
+        this.year = year;
     }
 }

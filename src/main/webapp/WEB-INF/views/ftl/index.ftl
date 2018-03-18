@@ -40,6 +40,7 @@
         <form name="carDto" action="add" method="post" modelAttribute="carDto">
             Make : <input type="text" name="make" />	<br/>
             Model: <input type="text" name="model" />	<br/>
+            Year  : <input type="text" name="year" />	<br/>
             <input type="submit" value="   Save   " />
         </form>
     </fieldset>
@@ -47,14 +48,16 @@
     <br/>
     <table class="datatable">
         <tr>
-            <th>Make</th>  <th>Model</th>
+            <th>Make</th>  <th>Model</th>  <th>Year</th>
         </tr>
         <#list model["carList"] as carDto>
             <tr>
-                <td>${carDto.make}</td> <td>${carDto.model}</td>
+                <td>${carDto.make}</td> <td>${carDto.model}</td> <td>${carDto.year}</td>
             </tr>
         </#list>
     </table>
+
+    <input type="button" value="Search" onclick="location.href='/search'"/>
 
 </div>
 </body>

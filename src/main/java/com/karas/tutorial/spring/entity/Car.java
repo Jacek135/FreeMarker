@@ -18,12 +18,16 @@ public class Car {
     @Column(name = "MODEL")
     private String model;
 
+    @Column(name = "YEAR")
+    private Long year;
+
     public Car() {
     }
 
-    public Car(String make, String model) {
+    public Car(String make, String model, Long year) {
         this.make = make;
         this.model = model;
+        this.year = year;
     }
 
     public Long getId() {
@@ -48,5 +52,13 @@ public class Car {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public Long getYear() {
+        return year;
+    }
+
+    public void setYear(Long year) {
+        this.year = year;
     }
 }

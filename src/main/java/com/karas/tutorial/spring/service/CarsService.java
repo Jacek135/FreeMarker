@@ -27,7 +27,7 @@ public class CarsService {
 
     @Transactional
     public void saveCar(CarDto carDto) {
-        Car car = new Car(carDto.getMake(), carDto.getModel());
+        Car car = new Car(carDto.getMake(), carDto.getModel(), carDto.getYear());
         repository.save(car);
     }
 }

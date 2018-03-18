@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HelloWorldController {
 
     private static final String CARS = "redirect:/cars";
+    public static final String INDEX = "index";
+    public static final String SEARCH = "search";
+
     private CarFacade facade;
 
     @Autowired
@@ -29,7 +32,7 @@ public class HelloWorldController {
     public String seyHello(@ModelAttribute("model") ModelMap model) {
         model.addAttribute("carList", facade.findAllCars());
 
-        return "index";
+        return INDEX;
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -39,5 +42,10 @@ public class HelloWorldController {
             facade.saveCar(carDto);
         }
         return CARS;
+    }
+
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    public String search() {
+        return SEARCH;
     }
 }
